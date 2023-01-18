@@ -7,8 +7,9 @@
 
 **Table of Contents**
 
-- [Installation](#installation)
-- [License](#license)
+- [dask-opentelemetry](#dask-opentelemetry)
+  - [Installation](#installation)
+  - [License](#license)
 
 ## Installation
 
