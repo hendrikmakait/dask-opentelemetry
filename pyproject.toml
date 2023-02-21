@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "dask-opentelemetry"
-description = 'Instrument Dask with OpenTelemetry'
+description = "Instrument Dask with OpenTelemetry"
 readme = "README.md"
 requires-python = ">=3.7"
 license = "MIT"
@@ -23,19 +23,22 @@ classifiers = [
   "Programming Language :: Python :: Implementation :: CPython",
   "Programming Language :: Python :: Implementation :: PyPy",
 ]
-dependencies = []
+dependencies = [
+  "opentelemetry-api>=1.16.0",
+]
 dynamic = ["version"]
 
 [project.urls]
-Documentation = "https://github.com/unknown/dask-opentelemetry#readme"
-Issues = "https://github.com/unknown/dask-opentelemetry/issues"
-Source = "https://github.com/unknown/dask-opentelemetry"
+Documentation = "https://github.com/hendrikmakait/dask-opentelemetry#readme"
+Issues = "https://github.com/hendrikmakait/dask-opentelemetry/issues"
+Source = "https://github.com/hendrikmakait/dask-opentelemetry"
 
 [tool.hatch.version]
 path = "dask_opentelemetry/__about__.py"
 
 [tool.hatch.envs.default]
 dependencies = [
+  "pre-commit",
   "pytest",
   "pytest-cov",
 ]
