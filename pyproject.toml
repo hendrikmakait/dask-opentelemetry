@@ -6,22 +6,18 @@ build-backend = "hatchling.build"
 name = "dask-opentelemetry"
 description = "Instrument Dask with OpenTelemetry"
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.8, <4.0"
 license = "MIT"
 keywords = []
 authors = [
   { name = "Hendrik Makait", email = "hendrik@makait.com" },
 ]
 classifiers = [
-  "Development Status :: 4 - Beta",
   "Programming Language :: Python",
-  "Programming Language :: Python :: 3.7",
   "Programming Language :: Python :: 3.8",
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
-  "Programming Language :: Python :: Implementation :: CPython",
-  "Programming Language :: Python :: Implementation :: PyPy",
 ]
 dependencies = [
   "distributed>=2023.2.0",
@@ -51,7 +47,7 @@ cov = "pytest --cov-report=term-missing --cov-config=pyproject.toml --cov=dask_o
 no-cov = "cov --no-cov {args}"
 
 [[tool.hatch.envs.test.matrix]]
-python = ["37", "38", "39", "310", "311"]
+python = ["38", "39", "310", "311"]
 
 [tool.coverage.run]
 branch = true
